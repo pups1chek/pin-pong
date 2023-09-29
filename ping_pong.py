@@ -9,6 +9,7 @@ class GameSprite(sprite.Sprite):
         self.rect = player_x
         self.rect = player_y
 
+
 window = display.set_mode((700,500))
 display.set_caption('piiiing-pooooong')
 background = transform.scale(image.load('background.jpg'), (700,500))
