@@ -8,6 +8,19 @@ class GameSprite(sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect = player_x
         self.rect = player_y
+class Player(GameSprite):
+    def update_r(self):
+        keys = key.get_pressed()
+        if keys[K_UP]:
+            self.rect.x += self.speed
+        if keys[K_DOWN]:
+            self.rect.y -= self.speed
+    def update_l(self):
+         keys = key.get_pressed()
+        if keys[K_w]:
+            self.rect.x += self.speed
+        if keys[K_s]:
+            self.rect.y -= self.speed
 
 
 window = display.set_mode((700,500))
